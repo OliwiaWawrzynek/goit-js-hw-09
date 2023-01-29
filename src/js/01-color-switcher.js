@@ -9,16 +9,16 @@ function getRandomHexColor() {
 
 buttonStart.addEventListener("click", e => {
     e.preventDefault();
-    buttonStart.disabled = true;
-    buttonStop.disabled = false;
     timerId = setInterval(() => {
-        color.style.backgroundColor = getRandomHexColor();
+      color.style.backgroundColor = getRandomHexColor();
+      buttonStart.disabled = true;
+      buttonStop.disabled = false;
     }, 1000);
 }
 );
 
 buttonStop.addEventListener("click", () => {
+    clearInterval(timerId);
     buttonStart.disabled = false;
     buttonStop.disabled = true;
-  clearInterval(timerId);
 });
