@@ -10,7 +10,7 @@ buttonStart.addEventListener("click", e => {
     e.preventDefault();
     buttonStart.disabled = true;
     buttonStop.disabled = false;
-    timerId = setInterval(() => {
+    let timerId = setInterval(() => {
         color.style.backgroundColor = getRandomHexColor();
     }, 1000);
 }
