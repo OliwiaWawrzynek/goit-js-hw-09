@@ -8,6 +8,7 @@ let dataDays = document.querySelector('[data-days]');
 let dataHours = document.querySelector('[data-hours]');
 let dataMinutes = document.querySelector('[data-minutes]');
 let dataSeconds = document.querySelector('[data-seconds]');
+let userDate = null;
 const actualDate = new Date();
 
 const options = {
